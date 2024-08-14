@@ -1,0 +1,322 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+body{
+    background-color: rgb(35, 35, 35);
+    margin-bottom: 100px;
+    width: 100%;
+}
+header{
+    background-color: rgb(0, 0, 0);
+    color: white;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    z-index: 99;
+    margin: 0 auto;
+}
+.navBar{
+    margin-left: 20px;
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+}
+.navBar .name{
+    color: white;
+    font-size: 2.5rem;
+    font-weight: bold;
+    background: linear-gradient(to right, rgb(43, 3, 3),rgb(255, 0, 106), rgb(255, 0, 0));
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 0 15px;
+}
+.navBar .name span{
+    color: red;
+}
+.mobileMenu .menuList{
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    transition: all 0.3s ease-in-out;
+    background-color: white;
+}
+.navBar .iconList{
+    position: relative;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 1vw;
+}
+.navBar .iconList .theList{
+    padding: 4px 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 1vw;
+}
+.navBar .iconList a{
+    padding: 2px 5px;
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+}
+.navBar .iconList .theList:hover{
+    border-radius: 4px;
+    background-color: red;
+    transition: all 0.5s;
+}
+.Signup-Btn{
+    background: white;
+    color: red;
+    border: none;
+    border-radius: 15px;
+    padding: 8px 15px;
+}
+.Signup-Btn:hover{
+    background-color: red;
+    color: white;
+    font-weight: bold;
+    transition: all 0.5s;
+}
+.highlight{
+    border-bottom: 4px solid red;
+}
+@media screen and (max-width: 800px){
+    header{
+        display: flex;
+        justify-content: space-between;
+        height: 80px;
+        z-index: 999999;
+        width: 100%;
+        max-width: 1300px;
+        padding: 0;
+        align-items: center;
+    }
+    .iconList{
+        display: grid;
+        grid-template-columns: auto;
+        margin: 0;
+        width: 100%;
+        position: absolute;
+        top: -1000px;
+        opacity: 1;
+        transition: all 0.5s ease;
+        z-index: -1;
+    }
+    .iconList.active{
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        position: absolute;
+        width: 60%;
+        right: 0;
+        margin-right: 0;
+        backdrop-filter: blur(10px);
+        top: 100%;
+        opacity: 1;
+        transition: all 0.5s ease;
+
+        height: 100vh;
+        font-size: 1.2rem;
+    }
+    .mobileMenu .menuList{
+        width: 25px;
+        height: 3px;
+        margin: 5px auto;
+        transition: all 0.3s ease-in-out;
+        background-color: white;
+    }
+    .menuItems{
+        width: 100%;
+    }
+
+    .theList{
+        text-align: center;
+        padding: 100%;
+        width: 50%;
+        margin-bottom: 2vh;
+    }
+    .Signup-Btn{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width:100%;
+        font-size: 1rem;
+        margin: 0;
+        margin-bottom: 5px;
+    }
+    #mobile-menu{
+        position: absolute;
+        top: 20%;
+        right: 5%;
+        transform: translate(5%, 20%);
+    }
+    .mobileMenu .menuList{
+        display: block;
+        cursor: pointer;
+    }
+    #mobile-menu.is-active .menuList:nth-child(2) {
+        opacity: 0;
+    }
+
+    #mobile-menu.is-active .menuList:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    #mobile-menu.is-active .menuList:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+
+    
+}
+@media screen and (max-width: 400px) {
+    .navBar{
+        margin:0 10px;
+        padding: 0;
+    }
+    .img{
+        display: block;
+        width: 80%;
+    }
+    .name{
+        font-size: 1.8rem;
+    }
+    .text{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 100px;
+}
+.signupheader{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 5rem;
+    font-weight: bold;
+    color: red;
+    padding-bottom: 1rem;
+}
+.signup-elmts{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid red;
+    padding-bottom: 2rem;
+}
+.input-text{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.user-input{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.name{
+    margin: 3vh 0;
+    padding: 5px 5px;
+    font-size: 1.5rem;
+    color: white;
+    margin-right: 5vw;
+    margin-left: 10px;
+}
+.user-input{
+    margin: 3vh 0;
+    padding: 10px 10px;
+    margin-right: 5vw;
+    border: 2px solid red;
+}
+.contain{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.T-and-C{
+    margin-left: 1vw;
+    display: inline-block;
+    color: white;
+    text-align: center;
+}
+.checkbox{
+    margin-left: 1vw;
+    padding-bottom: 2px;
+}
+.New{
+    background-color: green;
+}
+.signup-Btn-main{
+    padding: 15px 40px;
+    margin-top: 2vh;
+    border: none;
+    border-radius: 25px;
+    background: red;
+    color: white;
+    cursor: pointer;
+}
+.signup-Btn-main:hover{
+    background: white;
+    color: red;
+    transition: all 0.5s ease;
+    font-weight: bold;
+    font-size: 1rem;
+}
+.login-text{
+    color: white;
+    margin-top: 2vh;
+}
+.login-bottom{
+    margin-bottom: 2rem;
+}
+.new-class{
+    background-color: green;
+}
+@media screen and (max-width: 500px) {
+    .signup-elmts{
+        width: 94%;
+    }
+    .name{
+        font-size: 1.2rem;
+    }
+    .user-input{
+        padding: 8px;
+    }
+}
+@media screen and (max-width: 400px) {
+    .signup-elmts{
+        width: 94%;
+    }
+    .name{
+        font-size: 1rem;
+        padding: 0;
+        margin-left: 2px;
+        margin: 10px 0;
+    }
+    .user-input{
+        padding: 5px;
+        margin-right: 2vw;
+    }
+    .signup-names{
+        margin: 30px 0;
+    }
+    
+}

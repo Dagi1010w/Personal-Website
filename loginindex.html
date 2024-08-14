@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="styles/Signupstyle.css">
+</head>
+<body>
+
+    <header>
+        <nav class="navBar">
+            <p class="name" id="logo"><span>D</span>AGIM</p>
+            <div class="mobileMenu" id="mobile-menu">
+                <span class="menuList"></span>
+                <span class="menuList"></span>
+                <span class="menuList"></span>
+            </div>
+            <ul class="iconList">
+                <li class="theList" id="homePage"><a href="index2.html">Home</a></li>
+                <li class="theList" id="projectPage"><a href="#Projects">Projects</a></li>
+                <li class="theList" id="aboutPage"><a href="#Aboutme">About Me</a></li>
+                <li class="theList" id="servicesPage"><a href="#Contact">Contacts</a></li>
+                <a class="theLists" href="Signupindex.html"><button class="Signup-Btn">Sign Up</button></a>
+                <a class="theLists" href="loginindex.html"><button class="Signup-Btn login-Btn">Login</button></a>
+            </ul>
+    </nav>
+    </header>
+
+    <nav class="container">
+        
+
+        <div class="signup-elmts">
+            <p class="signupheader">Log In</p>
+
+            <div class="input-text">
+                <div class="texts">
+                    <p class="name">User Name / Email: </p>
+                    <p class="name">Password: </p>
+                </div>
+
+
+                <div class="inputs">
+                    <input type="text" class="user-input" placeholder="User Name / Email">
+                    <input type="password" class="user-input userPassword" placeholder="Password">
+                </div>
+            </div>
+            
+            <div>
+                <button class="signup-Btn-main loginBtn">Log In</button>
+            </div>
+
+            <p class="login-text  login-bottom">If you don't have an account. <a href="Signupindex.html">Sign Up</a></p>
+        
+        </div>
+    </nav>
+</body>
+<script src="mainJs/indexjs.js"></script>
+<script>
+    let loginElmt = document.querySelector('.loginBtn');
+    loginElmt.addEventListener('click', () => {
+        let userElmt = document.querySelector('.user-input');
+    let userPasscode = document.querySelector('.userPassword');
+
+    if(userElmt.value === '' || userPasscode.value === ''){
+        alert('Fill the Requirement.')
+    }else{
+        alert('Loged in Sucessfully')
+    }
+    });
+</script>
+</html>

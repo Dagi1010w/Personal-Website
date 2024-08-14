@@ -1,0 +1,856 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+body{
+    background-color: rgb(35, 35, 35);
+    margin-bottom: 100px;
+    width: 100%;
+}
+header{
+    background-color: rgb(0, 0, 0);
+    color: white;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    z-index: 99;
+    margin: 0 auto;
+}
+.navBar{
+    margin-left: 20px;
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+}
+.navBar .name{
+    color: white;
+    font-size: 2.5rem;
+    font-weight: bold;
+    background: linear-gradient(to right, rgb(43, 3, 3),rgb(255, 0, 106), rgb(255, 0, 0));
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 0 15px;
+}
+.navBar .name span{
+    color: red;
+}
+.mobileMenu .menuList{
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    transition: all 0.3s ease-in-out;
+    background-color: white;
+}
+.navBar .iconList{
+    position: relative;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 1vw;
+}
+.navBar .iconList .theLists{
+    padding: 4px 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 1vw;
+}
+.navBar .iconList .theList{
+    padding: 4px 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 1vw;
+}
+.signup-Btn-a,
+.navBar .iconList a{
+    padding: 2px 5px;
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+}
+.navBar .iconList .theLists:hover{
+    transition: all 0.5s;
+}
+.navBar .iconList .theList:hover{
+    border-radius: 4px;
+    background-color: red;
+    transition: all 0.5s;
+}
+.Signup-Btn{
+    background: white;
+    color: red;
+    border: none;
+    border-radius: 15px;
+    padding: 8px 15px;
+}
+.Signup-Btn:hover{
+    background-color: red;
+    color: white;
+    font-weight: bold;
+    transition: all 0.5s;
+}
+.login-Btn{
+    background-color: red;
+    color: white;
+}
+.login-Btn:hover{
+    background-color: white;
+    color: red;
+}
+.highlight{
+    border-bottom: 4px solid red;
+}
+@media screen and (max-width: 800px){
+    header{
+        display: flex;
+        justify-content: space-between;
+        height: 80px;
+        z-index: 999999;
+        width: 100%;
+        max-width: 1300px;
+        padding: 0;
+        align-items: center;
+    }
+    .iconList{
+        display: grid;
+        grid-template-columns: auto;
+        margin: 0;
+        width: 100%;
+        position: absolute;
+        top: -1000px;
+        opacity: 1;
+        transition: all 0.5s ease;
+        z-index: -1;
+    }
+    .iconList.active{
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        position: absolute;
+        width: 60%;
+        right: 0;
+        margin-right: 0;
+        backdrop-filter: blur(10px);
+        top: 100%;
+        opacity: 1;
+        transition: all 0.5s ease;
+        height: 100vh;
+        font-size: 1.2rem;
+    }
+    .mobileMenu .menuList{
+        width: 25px;
+        height: 3px;
+        margin: 5px auto;
+        transition: all 0.3s ease-in-out;
+        background-color: white;
+    }
+    .menuItems{
+        width: 100%;
+    }
+    .theLists{
+        text-align: center;
+        padding: 100%;
+        width: 50%;
+        margin-bottom: 2vh;
+    }
+    .theList{
+        text-align: center;
+        padding: 100%;
+        width: 50%;
+        margin-bottom: 2vh;
+    }
+
+    .Signup-Btn{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width:100%;
+        font-size: 1rem;
+        margin: 0;
+    }
+    #mobile-menu{
+        position: absolute;
+        top: 20%;
+        right: 5%;
+        transform: translate(5%, 20%);
+    }
+    .mobileMenu .menuList{
+        display: block;
+        cursor: pointer;
+    }
+    #mobile-menu.is-active .menuList:nth-child(2) {
+        opacity: 0;
+    }
+
+    #mobile-menu.is-active .menuList:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    #mobile-menu.is-active .menuList:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+
+    
+}
+@media screen and (max-width: 400px) {
+    .navBar{
+        margin:0 10px;
+        padding: 0;
+    }
+    .img{
+        display: block;
+        width: 80%;
+    }
+    .name{
+        font-size: 1.8rem;
+    }
+    .text{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+
+
+.mainContainer{
+    color: white;
+    padding-top: 200px;
+    padding-bottom: 14rem;
+}
+.mainContainer .content{
+    display: flex;
+    height: 85%;
+    z-index: 3;
+    justify-content: center;
+    align-items: center;
+}
+img{
+    margin-right: 150px;
+    margin-left: 20px;
+    height: 80%;
+    width: 300px;
+    border-radius: 50%;
+    border: 4px solid red;
+    cursor: pointer;
+}
+.mainContainer .text{
+    width: 100%;
+    margin-top: -100px;
+}
+.mainContainer .text .hello{
+    letter-spacing: 3px;
+    padding: 5px 0;
+    font-size: 2rem;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+.mainContainer .text .name{
+    font-size: 2.5rem;
+
+}
+.mainContainer .text .name span{
+    color: red;
+}
+.mainContainer .text .subname{
+    line-height: 35px;
+
+}
+.mainContainer .text p{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 0.7rem;
+    flex-wrap: wrap;
+    font-size: 1rem; 
+    padding: 15px 0; 
+    width: 90%;                                    
+}
+.mainContainer .text .Portifolio,
+.mainContainer .text .aboutMe{
+    padding: 15px 23px;
+    background: red;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+    margin-top: 30px;
+    margin-right: 30px;
+    cursor: pointer;
+}
+.mainContainer .text .Portifolio:hover,
+.mainContainer .text .aboutMe:hover{
+    background-color: white;
+    color: red;
+    transition: all 0.5s ease;
+}
+
+@media screen and (max-width: 900px){
+    .mainContainer{
+        color: white;
+        padding-top: 120px;
+        padding-bottom: 7rem;
+        max-width: 1200px;
+    }
+    .mainContainer .content{
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-content: center;
+        align-items: center;
+    }
+    .pic{
+        display: flex;
+        justify-content: center;
+    }
+    img{
+        margin-right: 0;
+        margin-left: 0;
+    }
+    .mainContainer .text{
+        width: 100%;
+        margin-top: 50px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .mainContainer .text p{ 
+        width: 80%;                                    
+    }
+    .mainContainer .text .hello{
+        font-size: 4rem;
+    }
+    .mainContainer .text .name{
+        font-size: 3.5rem;
+    }
+    .mainContainer .text .Portifolio,
+    .mainContainer .text .aboutMe{
+        padding: 15px 50px;
+    }
+    
+}
+
+
+.portifolioSection{
+    margin-left: 20px;
+    padding: 7rem 0;
+}
+.myproject{
+    padding: 25px 0;
+    color: white;
+    font-size: 3rem;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+}
+.portifolioSection .portifolios{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    row-gap: 50px;
+    column-gap:10px;
+}
+
+.project{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    border: 2px solid red;
+    height: 400px;
+    width: 300px;
+}
+.project:hover{
+    transform: scale(1.075);
+    transition: all 0.4s ease-in;
+    cursor: pointer;
+    box-shadow: 7px 8px 10px red;
+}
+.portifolioSection .portifolios .card{
+    margin: 10px;
+    height: 3250px;
+    width: 280px;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-image: linear-gradient(to right, rgb(50, 122, 231), rgb(240, 72, 175) 100%);
+    transition: 0.3s ease-in;
+}
+.Names{
+    font-size: 20px;
+    font-weight: bold;
+}
+.description{
+    margin: 4px 15px;
+    text-align: center;
+}
+.review{
+    padding: 10px 25px;
+    margin: 20px 0;
+    margin-bottom: 5px;
+    width: 50%;
+    border: none;
+    border-radius: 5px;
+    background-image: linear-gradient(to right, rgb(231, 50, 50), rgb(240, 72, 175) 100%);
+    color: white;
+    cursor: pointer;
+}
+.review:hover{
+    background-image: linear-gradient(to right, rgb(3, 250, 147), rgb(247, 2, 2) 100%);
+    color: white;
+    transition: 0.5s ease-in;
+}
+@media screen and (max-width: 1100px){
+    .portifolioSection .portifolios{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+        row-gap: 50px;
+        column-gap:10px;
+    }
+    .myproject{
+        font-size: 5rem;
+    }
+    .project{
+        width: 250px;
+    }
+    .portifolioSection .portifolios .card{
+        width: 230px;
+    }
+}
+@media screen and (max-width: 900px){
+    .portifolioSection .portifolios{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+        row-gap: 50px;
+        column-gap:10px;
+    }
+    .project{
+        width: 300px;
+    }
+    .portifolioSection .portifolios .card{
+        width: 280px;
+    }
+    @media screen and (max-width: 800px){
+        .portifolioSection .portifolios{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .myproject{
+            font-size: 5rem;
+        }
+        .project{
+            width: 60vw;
+            margin-bottom: 4vh;
+        }
+        .portifolioSection .portifolios .card{
+            width: 50vw;
+        }
+        .myproject{
+            font-size: 3rem;
+        }
+    }
+    @media screen and (max-width: 600px) {
+        .project{
+            width: 80vw;
+            margin-bottom: 4vh;
+        }
+        .portifolioSection .portifolios .card{
+            width: 75vw;
+        }
+    }
+
+    
+}
+
+
+.aboutmeSection{
+    color: white;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-left: 20px;
+    padding: 9rem 0;
+}
+.aboutHeader{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 5vh;
+}
+.about-me-h1{
+    font-size: 4rem;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+    color: white;
+}
+.header-description{
+    font-size: 2rem;
+    font-weight: bold;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.main-aboutme{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 3rem;
+}
+.main-description{
+    display: flex;
+    width: 90%;
+    flex-wrap: wrap;
+    flex-grow: var(2px);
+    font-size: 1.2rem;
+}
+.aboutme-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.aboutme-skills{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items:start;
+    width: 40%;
+    margin-right: 200px;
+}
+.skills{
+    width: 15vw;
+    height: 15vh;
+    background-color: red;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5vh;
+    border-radius: 15px;
+    cursor: pointer;
+}
+.skills:hover{
+    transform: scale(1.075);
+    transition: all 0.4s ease-in;
+    background-color: white;
+    color: red;
+    border: 5px solid rgb(0, 255, 0);
+}
+.skill{
+    font-size: 2rem;
+}
+.percentage{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: end;
+}
+.aboutme-description{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items:start;
+    width: 40%;
+    margin-left: 200px;
+}
+.experiances{
+    background-color: white;
+    width: 15vw;
+    height: 15vh;
+    margin-bottom: 5vh;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid rgb(0, 255, 0);
+}
+.expert{
+    font-size: 2rem;
+}
+@media screen and (max-width: 980px){
+    .aboutme-skills{
+        margin-right: 180px;
+    }
+    .aboutme-description{
+        margin-left: 180px;
+    }
+    .expert,
+    .skill{
+        font-size: 1.7rem;
+    }
+    .header-description{
+        font-size: 1.5rem;
+    }
+}
+@media screen and (max-width: 750px){
+    .aboutme-skills{
+        margin-right: 150px;
+    }
+    .aboutme-description{
+        margin-left: 150px;
+    }
+    .header-description{
+        font-size: 1.2rem;
+    }
+    .expert,
+    .skill{
+        font-size: 1.4rem;
+    }
+}
+@media screen and (max-width: 600px){
+    .aboutme-skills{
+        margin-right: 100px;
+    }
+    .aboutme-description{
+        margin-left: 100px;
+    }
+    .header-description{
+        font-size: 1rem;
+    }
+    .expert,
+    .skill{
+        font-size: 1rem;
+    }
+    .experiances,
+    .skills{
+        width: 20vw;
+        height: 10vh;
+    }    
+}
+@media screen and (max-width: 400px){
+    .aboutme-skills{
+        margin-right: 60px;
+    }
+    .aboutme-description{
+        margin-left: 60px;
+    }
+    .header-description{
+        font-size: 1rem;
+    }
+    .expert,
+    .skill{
+        font-size: 0.5rem;
+    }
+    .p-experiance{
+        font-size: 0.7rem;
+    }
+    .about-me-h1{
+        font-size: 3rem;
+    }
+}
+
+
+
+
+
+
+
+
+.contactSection{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 10rem;
+    border-top: 2px solid red;
+}
+.contactSection .header{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    padding-bottom: 50px;
+}
+.contactSection .header .title{
+    font-size: 4rem;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+    padding: 20px;
+}
+.contactSection .header .subtitle{
+    font-size: 1.5rem;
+    padding: 10px;
+}
+.contactSection .ContactSec{
+    display: flex;
+    justify-content: space-between;
+    align-items: top;
+    margin-bottom: 30px;
+}
+
+.contactSection .ContactSec .input{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+input{
+    padding: 10px 0;
+    padding-right: 50px;
+    border: 2px solid red;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    margin: 1vh 3vw;
+}
+#message{
+    padding-bottom: 50px;   
+}
+input::placeholder{
+    font-weight: bold;
+    color: black;
+}
+.submitBtn{
+    padding: 10px;
+    border: none;
+    border-radius: 25px;
+    background: red;
+    color: white;
+    cursor: pointer;
+    width: 80%;
+    align-content: center;
+}
+.submitBtn:hover{
+    background: white;
+    color: red;
+    transition: all 0.5s ease;
+}
+.contactInfo{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    font-size: large;
+    padding: 0 4px;
+    margin: 0 3vw;
+}
+.info span{
+    color: red;
+    font-weight: bold;
+    font-size: 20px;
+}
+.bottom{
+    color: white;
+    margin-bottom: 5vh;
+}
+
+@media screen and (max-width: 800px){
+    .contactSection{
+        padding-bottom: 10vh;
+        margin-bottom: 10vh;
+    }
+    .contactSection .ContactSec{
+        display: flex;
+        justify-content: space-between;
+        align-items: top;
+        margin-bottom: 30px;
+    }
+    .contactInfo{
+        display: flex;
+        justify-content: space-between;
+        align-items: start;
+    }
+    .contactSection .ContactSec .input{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-left: 10px;
+    }
+    .contactSection .header .subtitle{
+        font-size: 1.3rem;
+        padding: 10px;
+    }
+    input{
+        margin-bottom: 1vh;
+    }
+    .submitBtn{
+        width: 80%;
+        align-content: center;
+    }
+}
+@media screen and (max-width: 600px){
+    .contactSection .header .subtitle{
+        font-size: 1.2rem;
+        padding: 10px;
+    }
+    .contactSection .ContactSec{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .contactSection .ContactSec .input{
+        margin-bottom: 50px;
+    }
+    input{
+        padding: 12px 0;
+        padding-right: 120px;
+        margin-bottom: 15px;
+    }
+    #message{
+        padding-bottom: 60px;   
+    }
+    .contactInfo{
+        margin-bottom: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: start;
+    }
+    .info span{
+
+        color: red;
+        font-weight: bold;
+        font-size: 25px;
+    }
+    .submitBtn{
+        width: 80%;
+        align-content: center;
+    }
+}
+    @media screen and (max-width: 700px){
+        .contactSection .header .title{
+            font-size: 3rem;
+        }
+        .input{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .submitBtn{
+            width: 80%;
+            align-content: center;
+        }
+
+    }
+    @media screen and (max-width: 400px){
+        .contactSection .header .title{
+            font-size: 2rem;
+        }
+        input{
+            padding-right: 40px;
+        }
+        .input{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .submitBtn{
+            width: 80%;
+            align-content: center;
+        }
+        .contactInfo{
+            display: flex;
+            justify-content: center;
+            align-items: start;
+        }
+    }
